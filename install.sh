@@ -22,7 +22,7 @@ fi
 echo "Downloading affirmations script..."
 
 # URL to raw script from GitHub (replace with your actual raw URL)
-RAW_URL="https://raw.githubusercontent.com/yourusername/affirmations-project/main/affirmations.sh"
+RAW_URL="https://raw.githubusercontent.com/1nam/affirm/refs/heads/main/install.sh"
 
 # Use curl to download the file and make it executable
 curl -s -o "$INSTALL_PATH" "$RAW_URL"
