@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the location where we want to install the script
-INSTALL_PATH="/usr/local/bin/affirm"
+INSTALL_PATH="/usr/local/bin/"
 
 # Check if the script is already installed
 if command -v affirm &>/dev/null; then
