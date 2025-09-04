@@ -9,7 +9,7 @@ SCRIPT_NAME="affirm"
 echo "🔮 Installing $SCRIPT_NAME..."
 
 # Download the script from GitHub
-curl -s -o /tmp/$SCRIPT_NAME https://raw.githubusercontent.com/1nam/affirm/refs/heads/main/install.sh
+curl -s -o /tmp/$SCRIPT_NAME https://raw.githubusercontent.com/1nam/affirm/main/affirm
 chmod +x /tmp/$SCRIPT_NAME
 sudo mv /tmp/$SCRIPT_NAME $INSTALL_DIR/
 
