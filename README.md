@@ -11,6 +11,10 @@ curl -s https://raw.githubusercontent.com/1nam/affirm/refs/heads/main/install.sh
 
 Usage open terminal and simply just type:  affirm
 
+after install type in terminal:  source ~/.bashrc
+or
+just close and reopen terminal
+
 Example output:
 ✨ Your affirmation for good luck ✨
 Luck is always on my side.
