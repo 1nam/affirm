@@ -1,16 +1,29 @@
 #!/bin/bash
-# Installer for affirm command
 
-set -e
+# Define the location where we want to install the script
+INSTALL_PATH="/usr/local/bin/affirm"
 
-INSTALL_DIR="/usr/local/bin"
-SCRIPT_NAME="affirm"
+# Check if the script is already installed
+if command -v affirm &>/dev/null; then
+  echo "Affirmations are already installed. You can run 'affirm' anytime."
+  exit 0
+fi
 
-echo "🔮 Installing $SCRIPT_NAME..."
+# Download the affirmations script directly from GitHub
+echo "Downloading affirmations script..."
 
-# Download the script from GitHub
-curl -s -o /tmp/$SCRIPT_NAME https://raw.githubusercontent.com/1nam/affirm/refs/heads/main/install.sh
-chmod +x /tmp/$SCRIPT_NAME
-sudo mv /tmp/$SCRIPT_NAME $INSTALL_DIR/
+# URL to raw script from GitHub (replace with your actual raw URL)
+RAW_URL="https://raw.githubusercontent.com/1nam/affirm/refs/heads/main/install.sh"
 
-echo "✅ Installed! You can now type 'affirm' to get your affirmation."
+# Use curl to download the file and make it executable
+curl -s -o "$INSTALL_PATH" "$RAW_URL"
+chmod +x "$INSTALL_PATH"
+
+# Confirm successful installation
+if [ -f "$INSTALL_PATH" ]; then
+  echo "Affirmations installed successfully! You can now run 'affirm' to receive a daily affirmation."
+else
+  echo "Something went wrong during the installation. Please try again."
+  exit 1
+fi
+
